@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faith Essentials — Close the Gap | AlMaghrib Institute</title>
+    <meta name="description" content="The distance between what you feel and what you know is growing. Faith Essentials gives you 10 scholars, 32 courses, and a daily practice in 5 minutes. By AlMaghrib Institute.">
+    <link rel="icon" type="image/png" href="assets/images/site/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7A00DF',
+                        'primary-dark': '#6200B3',
+                        'primary-light': '#F3E8FF',
+                        'primary-mid': '#9B51E0',
+                        cta: '#32373C',
+                        'cta-hover': '#1a1d20',
+                        navy: '#0F172A',
+                        slate: '#1E293B',
+                        'slate-mid': '#475569',
+                        'slate-light': '#94A3B8',
+                        gold: '#D4A853',
+                        'gold-light': '#F5ECD7',
+                        'gold-dark': '#B8922E',
+                        warm: '#FAF7F2',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Base */
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', system-ui, sans-serif; color: #1E293B; background: #FFFFFF; }
+
+        /* Kicker pill styling */
+        .kicker-purple {
+            display: inline-block;
+            background: #F3E8FF;
+            color: #7A00DF;
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+        @media (min-width: 640px) {
+            .kicker-purple {
+                padding: 4px 14px;
+                font-size: 0.75rem;
+                letter-spacing: 0.1em;
+            }
+        }
+        .kicker-gold {
+            display: inline-block;
+            background: #F5ECD7;
+            color: #96791E;
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+        @media (min-width: 640px) {
+            .kicker-gold {
+                padding: 4px 14px;
+                font-size: 0.75rem;
+                letter-spacing: 0.1em;
+            }
+        }
+
+        /* Decorative line accent — purple */
+        .accent-line::before {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #7A00DF, #9B51E0);
+            margin: 0 auto 1.5rem;
+            border-radius: 2px;
+        }
+
+        /* Gold variant for emotional sections */
+        .accent-line-gold::before {
+            background: linear-gradient(90deg, #D4A853, #E8C97A);
+        }
+
+        /* Subtle geometric border pattern */
+        .geo-border-top {
+            border-top: 1px solid #E5E7EB;
+            position: relative;
+        }
+        .geo-border-top::before {
+            content: '◆';
+            position: absolute;
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 0 12px;
+            color: #D4A853;
+            font-size: 10px;
+            letter-spacing: 8px;
+        }
+
+        /* Timeline styles */
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, #D4A853 0%, #E8C97A 100%);
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 4px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #D4A853;
+            border: 2.5px solid #FFFFFF;
+            box-shadow: 0 0 0 2px #D4A853, 0 0 8px rgba(212,168,83,0.25);
+        }
+        .timeline-item:last-child::before {
+            bottom: 50%;
+        }
+
+        /* Fade-in animations */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .fade-up { opacity: 1; transform: none; transition: none; }
+        }
+
+        /* Lift hover */
+        .lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .lift:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.1); }
+
+        /* CTA button hover glow */
+        .cta-glow { transition: all 0.3s ease; }
+        .cta-glow:hover { box-shadow: 0 8px 24px rgba(50,55,60,0.3); transform: translateY(-1px); }
+
+        /* Sticky header */
+        .sticky-header {
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+        }
+        .sticky-header.show {
+            transform: translateY(0);
+        }
+
+        /* Mobile CTA bar */
+        .mobile-cta-bar {
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        .mobile-cta-bar.show {
+            transform: translateY(0);
+        }
+
+        /* FAQ accordion */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .faq-answer.open {
+            max-height: 500px;
+        }
+        .faq-toggle:hover {
+            background-color: #F9FAFB;
+        }
+        .faq-item.active .faq-toggle {
+            background-color: #FAFAFA;
+        }
+        .faq-icon {
+            transition: transform 0.35s ease, color 0.35s ease;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+            color: #7A00DF;
+        }
+
+        /* Counter animation */
+        .counter {
+            display: inline-block;
+        }
+
+        /* Value stack table */
+        .value-table tr:nth-child(even) { background-color: #F9FAFB; }
+        .value-table tr:last-child { background: linear-gradient(135deg, #F3E8FF, #EDE9FE); font-weight: 700; }
+        @media (max-width: 639px) {
+            .value-table { font-size: 0.8rem; }
+            .value-table th, .value-table td { padding: 0.6rem 0.75rem; }
+        }
+
+        /* Pricing popular card */
+        .pricing-popular {
+            border: 2px solid #7A00DF;
+            position: relative;
+            box-shadow: 0 4px 24px rgba(122,0,223,0.1);
+        }
+        .pricing-popular::before {
+            content: 'BEST VALUE';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #7A00DF, #9B51E0);
+            color: white;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            padding: 4px 18px;
+            border-radius: 20px;
+            box-shadow: 0 2px 8px rgba(122,0,223,0.3);
+        }
+
+        /* Warm section styling */
+        .warm-section {
+            background: linear-gradient(180deg, #FAF7F2 0%, #F7F1E8 100%);
+            position: relative;
+        }
+        .warm-section::before,
+        .warm-section::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #D4A853 20%, #D4A853 80%, transparent);
+            opacity: 0.5;
+        }
+        .warm-section::before { top: 0; }
+        .warm-section::after { bottom: 0; }
+
+        /* Feature block alternating layout */
+        .feature-block:nth-child(even) .feature-content { order: -1; }
+        @media (max-width: 767px) {
+            .feature-block:nth-child(even) .feature-content { order: 0; }
+        }
+
+        /* Scholar image styling - portrait rectangles to match source images */
+        .scholar-img {
+            width: 100px;
+            height: 130px;
+            border-radius: 12px;
+            object-fit: cover;
+            object-position: top;
+            border: 3px solid #F3E8FF;
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+        .scholar-img:hover {
+            border-color: #7A00DF;
+            transform: scale(1.03);
+        }
+
+        /* Scholar card top accent */
+        .scholar-card {
+            border-top: 3px solid #7A00DF;
+        }
+
+        /* Course card image overlay */
+        .course-card-img {
+            position: relative;
+        }
+        .course-card-img::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 30%;
+            background: linear-gradient(transparent, rgba(0,0,0,0.05));
+            pointer-events: none;
+        }
+
+        /* Phone glow */
+        .phone-glow {
+            filter: drop-shadow(0 0 50px rgba(122,0,223,0.2)) drop-shadow(0 0 100px rgba(122,0,223,0.1));
+        }
+
+        /* Testimonial quote marks */
+        .quote-mark {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 5rem;
+            line-height: 1;
+            color: #D4A853;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+    <!-- ============================================ -->
+    <!-- STICKY HEADER                                -->
+    <!-- ============================================ -->
+    <header id="stickyHeader" class="sticky-header fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-14">
+            <span class="font-serif font-bold text-navy text-lg">Faith Essentials</span>
+            <div class="flex items-center gap-4">
+                <a href="#pricing" class="hidden sm:inline-flex items-center px-5 py-2 bg-cta text-white text-sm font-semibold rounded-lg hover:bg-cta-hover transition-colors">
+                    Start Learning — $0.50/Day
+                </a>
+                <a href="#pricing" class="sm:hidden inline-flex items-center px-4 py-2 bg-cta text-white text-xs font-semibold rounded-lg hover:bg-cta-hover transition-colors">
+                    Start Learning
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================ -->
+    <!-- SECTION 1: HERO                              -->
+    <!-- ============================================ -->
+    <section id="hero" class="relative overflow-hidden bg-white">
+        <!-- Subtle gradient background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-white via-white to-primary-light/50 pointer-events-none"></div>
+
+        <!-- Trust micro-bar -->
+        <div class="relative bg-navy text-white/90 text-xs sm:text-sm text-center py-2.5 px-4">
+            <span class="inline-flex items-center gap-2 sm:gap-3 flex-wrap justify-center">
+                <span>10,000+ Students</span>
+                <span class="text-gold">·</span>
+                <span>AlMaghrib Institute</span>
+                <span class="text-gold">·</span>
+                <span>20 Years of Islamic Education</span>
+            </span>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 lg:pt-20 pb-16 sm:pb-20">
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+                <!-- Text content -->
+                <div class="order-2 lg:order-1">
+                    <p class="kicker-purple mb-4">Your Faith, Grounded</p>
+                    <h1 class="font-serif text-navy text-3xl sm:text-4xl lg:text-[3.5rem] lg:leading-[1.1] font-bold leading-tight mb-6">
+                        The Distance Between What You Feel and What You Know Is Growing Every&nbsp;Day
+                    </h1>
+                    <p class="text-slate-mid text-base sm:text-lg leading-relaxed mb-8 max-w-xl">
+                        You care about your faith more than you can articulate it. Faith Essentials closes that gap — 10 scholars, structured courses, and a daily practice that fits in 5 minutes. Built by AlMaghrib Institute. <strong class="text-slate">Less than your morning coffee.</strong>
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6">
+                        <a href="#pricing" class="inline-flex items-center justify-center px-8 py-4 bg-cta text-white font-bold text-base rounded-xl hover:bg-cta-hover transition-all shadow-xl shadow-cta/30 hover:shadow-2xl hover:shadow-cta/40 hover:-translate-y-0.5">
+                            Start Learning Today — $0.50/Day
+                        </a>
+                        <a href="#features" class="inline-flex items-center justify-center px-7 py-3.5 border-2 border-gray-300 text-slate font-semibold text-base rounded-xl hover:border-gray-400 hover:bg-gray-50 transition-colors">
+                            See What's Inside
+                        </a>
+                    </div>
+                    <p class="text-slate-light text-xs">Cancel anytime · No contracts · 30-day satisfaction guarantee</p>
+                </div>
+                <!-- Hero Visual -->
+                <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
+                    <div class="relative phone-glow">
+                        <img src="assets/images/site/phone.webp" alt="Faith Essentials app showing daily verse and course library" width="400" height="500" class="w-64 sm:w-72 lg:w-[22rem] h-auto relative z-10" loading="eager">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trust bar -->
+        <div class="bg-gray-50 border-t border-gray-100 py-4">
+            <div class="max-w-5xl mx-auto px-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-slate-mid text-xs sm:text-sm">
+                <span class="flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    10 Scholars
+                </span>
+                <span class="flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    32 Courses
+                </span>
+                <span class="flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    ~80 Hours
+                </span>
+                <span class="flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    Cancel Anytime
+                </span>
+                <span class="flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    iOS + Android + Web
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 2: PROBLEM AGITATION                 -->
+    <!-- ============================================ -->
+    <section class="warm-section py-16 sm:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="fade-up text-center mb-10">
+                <p class="kicker-gold mb-3">The Struggle</p>
+                <h2 class="font-serif text-navy text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight accent-line-gold">
+                    You know this feeling.
+                </h2>
+            </div>
+
+            <div class="fade-up grid md:grid-cols-5 gap-8 lg:gap-12 items-center">
+                <!-- Text -->
+                <div class="md:col-span-3 space-y-5 text-slate text-base sm:text-lg leading-relaxed">
+                    <p>You grew up Muslim. You learned the basics — how to pray, what to say, when to fast. But somewhere between childhood and now, <strong>a gap opened up.</strong></p>
+                    <p>Maybe it was a question a coworker asked that you couldn't answer. Maybe it was <strong>a doubt during a late night</strong> that never fully left. Maybe it was sitting in a khutbah and realizing you understood the Arabic but not the meaning.</p>
+                    <p>You've tried YouTube lectures at 2x speed. Instagram posts with beautiful calligraphy. Quran apps you opened twice. <strong>None of it stuck.</strong></p>
+                    <p>Not because you don't care — <strong>you care deeply.</strong> That's what makes it painful.</p>
+                    <p class="font-serif text-navy text-xl sm:text-2xl font-semibold italic">You're stuck between "I should know more" and "I don't know where to start."</p>
+                </div>
+                <!-- Visual -->
+                <div class="md:col-span-2">
+                    <img src="assets/images/site/lunch-1.webp" alt="Person learning on their phone" width="400" height="500" class="w-full rounded-2xl shadow-lg object-cover" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 3: BRIDGE + DAY 1 WALKTHROUGH        -->
+    <!-- ============================================ -->
+    <section class="py-16 sm:py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="fade-up text-center mb-12">
+                <p class="kicker-purple mb-3">Your First Day</p>
+                <h2 class="font-serif text-navy text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight accent-line">
+                    What if closing that gap only took 5 minutes a day?
+                </h2>
+                <p class="text-slate-mid text-base sm:text-lg mt-4 max-w-2xl mx-auto">Not 5 hours. Not a weekend seminar you'll forget by Monday. <strong class="text-slate">Five minutes. Every morning.</strong></p>
+            </div>
+
+            <div class="fade-up grid md:grid-cols-2 gap-10 lg:gap-16 items-start">
+                <!-- Timeline -->
+                <div>
+                    <h3 class="font-serif font-bold text-navy text-xl mb-8">Here's what your first day looks like:</h3>
+                    <div class="space-y-8">
+                        <div class="timeline-item">
+                            <p class="font-sans font-bold text-gold-dark text-sm tracking-wide uppercase mb-1.5 inline-block bg-gold-light/60 px-2 py-0.5 rounded">6:47 AM</p>
+                            <p class="text-slate text-base leading-relaxed">A push notification arrives before your alarm. A verse from the Quran with its tafsir. <strong>You read it in 2 minutes</strong> while still in bed.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <p class="font-sans font-bold text-gold-dark text-sm tracking-wide uppercase mb-1.5 inline-block bg-gold-light/60 px-2 py-0.5 rounded">7:15 AM</p>
+                            <p class="text-slate text-base leading-relaxed">While making coffee, you press play on the morning adhkar. 5 minutes of guided remembrance. <strong>Your day starts grounded</strong> instead of scrolling.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <p class="font-sans font-bold text-gold-dark text-sm tracking-wide uppercase mb-1.5 inline-block bg-gold-light/60 px-2 py-0.5 rounded">7:20 AM</p>
+                            <p class="text-slate text-base leading-relaxed">Your streak counter says "Day 1." Tomorrow it'll say Day 2.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <p class="font-sans font-bold text-gold-dark text-sm tracking-wide uppercase mb-1.5 inline-block bg-gold-light/60 px-2 py-0.5 rounded">That Evening</p>
+                            <p class="text-slate text-base leading-relaxed">You're curious. You open a 12-minute lesson from Shaykh Omar Suleiman's course. <strong>You finish it before bed.</strong></p>
+                        </div>
+                    </div>
+                    <div class="mt-8 p-5 bg-primary-light rounded-xl border border-primary/10 border-l-4 border-l-primary">
+                        <p class="text-slate font-semibold text-base"><strong class="text-primary">Total time: 19 minutes.</strong> You learned more structured Islamic knowledge than in the last 3 months of random YouTube clips.</p>
+                        <p class="text-slate-mid text-sm mt-2">That's Day 1. And tomorrow, the app is already waiting for you.</p>
+                    </div>
+                </div>
+                <!-- Visual -->
+                <div class="flex justify-center">
+                    <img src="assets/images/site/tablet_structured.webp" alt="Faith Essentials structured courses on tablet" width="500" height="400" class="w-full max-w-md rounded-2xl shadow-lg object-cover" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 4: PRODUCT INTRODUCTION              -->
+    <!-- ============================================ -->
+    <section class="py-16 sm:py-24 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="fade-up text-center mb-12">
+                <p class="kicker-purple mb-3">The Platform</p>
+                <h2 class="font-serif text-navy text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight accent-line">
+                    This is Faith Essentials.
+                </h2>
+                <p class="text-slate-mid text-base sm:text-lg mt-4 max-w-3xl mx-auto">Built by AlMaghrib Institute — 20 years of Islamic education trusted by hundreds of thousands of Muslims worldwide. Faith Essentials combines structured scholarship with the daily accessibility of your phone.</p>
+            </div>
+
+            <!-- Stat grid -->
+            <div class="fade-up grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 mb-12">
+                <div class="bg-white rounded-2xl p-4 sm:p-6 text-center border border-gray-200 shadow-sm">
+                    <span class="font-serif text-4xl sm:text-5xl font-bold text-primary counter" data-target="32">0</span>
+                    <p class="text-slate-mid text-xs sm:text-sm mt-2">Structured courses across fiqh, theology, spirituality, history, and contemporary life</p>
+                </div>
+                <div class="bg-white rounded-2xl p-4 sm:p-6 text-center border border-gray-200 shadow-sm">
+                    <span class="font-serif text-4xl sm:text-5xl font-bold text-primary counter" data-target="10">0</span>
+                    <p class="text-slate-mid text-xs sm:text-sm mt-2">Scholars &amp; instructors — Yasir Qadhi, Omar Suleiman, Yasmin Mogahed, and more</p>
+                </div>
+                <div class="bg-white rounded-2xl p-4 sm:p-6 text-center border border-gray-200 shadow-sm">
+                    <span class="font-serif text-3xl sm:text-4xl font-bold text-primary">Daily</span>
+                    <p class="text-slate-mid text-xs sm:text-sm mt-2">Verse + tafsir every morning, plus 5-minute guided adhkar</p>
+                </div>
+                <div class="bg-white rounded-2xl p-4 sm:p-6 text-center border border-gray-200 shadow-sm">
+                    <span class="font-serif text-3xl sm:text-4xl font-bold text-primary">Live</span>
+                    <p class="text-slate-mid text-xs sm:text-sm mt-2">Weekly Q&amp;A sessions with scholars — ask them directly</p>
+                </div>
+                <div class="bg-white rounded-2xl p-4 sm:p-6 text-center border border-gray-200 shadow-sm">
+                    <span class="font-serif text-3xl sm:text-4xl font-bold text-primary">AI</span>
+                    <p class="text-slate-mid text-xs sm:text-sm mt-2">Instant answers to your Islamic questions, 24/7</p>
+                </div>
+                <div class="bg-white rounded-2xl p-4 sm:p-6 text-center border border-gray-200 shadow-sm">
+                    <span class="font-serif text-3xl sm:text-4xl font-bold text-primary counter" data-target="10000" data-suffix="+">0</span>
+                    <p class="text-slate-mid text-xs sm:text-sm mt-2">Students who have learned with Faith Essentials</p>
+                </div>
+            </div>
+
+            <!-- Product visual -->
+            <div class="fade-up flex justify-center">
+                <img src="assets/images/site/catalog-copy.webp" alt="Faith Essentials course catalog" width="800" height="450" class="w-full max-w-3xl rounded-2xl shadow-lg object-cover" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructors group photo break -->
+    <div class="py-0 geo-border-top">
+        <img src="assets/images/site/instructors.webp" alt="Faith Essentials scholars and instructors" width="1400" height="700" class="w-full h-auto" loading="lazy">
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SECTION 5: FEATURES                          -->
+    <!-- ============================================ -->
+    <section id="features" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="fade-up text-center mb-6">
+                <p class="kicker-purple mb-3">How It Works</p>
+                <h2 class="font-serif text-navy text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight accent-line">
+                    Your deen, on your home screen. <br class="hidden sm:block">Depth, when you're ready.
+                </h2>
+                <p class="text-slate-mid text-base sm:text-lg mt-4 max-w-2xl mx-auto">The biggest reason Islamic learning doesn't stick? <strong class="text-slate">You have to remember to do it.</strong></p>
+            </div>
+
+            <div class="space-y-12 sm:space-y-16 mt-12">
+                <!-- Feature 1: Daily Anchor -->
+                <div class="fade-up feature-block grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-gold rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">1</div>
+                            <div class="w-12 h-12 bg-gold-light rounded-xl flex items-center justify-center">
+                                <svg class="w-6 h-6 text-gold-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                            </div>
+                        </div>
+                        <h3 class="font-serif font-bold text-navy text-xl sm:text-2xl mb-3">The daily anchor <span class="text-gold-dark">(5 minutes)</span></h3>
+                        <p class="text-slate text-base leading-relaxed">A morning verse + tafsir arrives as a push notification. A guided adhkar you play while making breakfast. A streak counter that grows — 7 days, 30 days, 100 days. <strong>A home screen widget so you see your verse before you see your email.</strong></p>
+                    </div>
+                    <div class="feature-content flex justify-center">
+                        <img src="assets/images/site/phone.webp" alt="Daily verse on Faith Essentials" width="300" height="400" class="w-48 sm:w-56 h-auto rounded-2xl shadow-lg" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Feature 2: Deep Study -->
+                <div class="fade-up feature-block grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">2</div>
+                            <div class="w-12 h-12 bg-primary-light rounded-xl flex items-center justify-center">
+                                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                            </div>
+                        </div>
+                        <h3 class="font-serif font-bold text-navy text-xl sm:text-2xl mb-3">The deep study <span class="text-slate-mid">(your pace)</span></h3>
+                        <p class="text-slate text-base leading-relaxed">32 courses broken into 10-15 minute lessons. Progress dashboard showing exactly where you are. <strong>Offline downloads for your commute.</strong> Structured paths designed by the scholars, not an algorithm.</p>
+                    </div>
+                    <div class="feature-content flex justify-center">
+                        <img src="assets/images/site/library.webp" alt="Faith Essentials course library" width="500" height="350" class="w-full max-w-sm rounded-2xl shadow-lg object-cover" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Feature 3: Instant Answer -->
+                <div class="fade-up feature-block grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">3</div>
+                            <div class="w-12 h-12 bg-primary-light rounded-xl flex items-center justify-center">
+                                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+                            </div>
+                        </div>
+                        <h3 class="font-serif font-bold text-navy text-xl sm:text-2xl mb-3">The instant answer</h3>
+                        <p class="text-slate text-base leading-relaxed">An AI assistant for the questions you're afraid to ask out loud. No waiting for office hours. No embarrassment. <strong>Ask at 2 AM when a doubt won't let you sleep.</strong></p>
+                    </div>
+                    <div class="feature-content flex justify-center">
+                        <img src="assets/images/site/ai.webp" alt="AI assistant answering Islamic questions" width="500" height="350" class="w-full max-w-sm rounded-2xl shadow-lg object-cover" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Feature 4: Live Connection -->
+                <div class="fade-up feature-block grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">4</div>
+                            <div class="w-12 h-12 bg-primary-light rounded-xl flex items-center justify-center">
+                                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                            </div>
+                        </div>
+                        <h3 class="font-serif font-bold text-navy text-xl sm:text-2xl mb-3">The live connection</h3>
+                        <p class="text-slate text-base leading-relaxed">Weekly Q&amp;A with scholars. Not a recording. Not a comments section. <strong>A real session where you raise your hand and ask your question.</strong></p>
+                    </div>
+                    <div class="feature-content flex justify-center">
+                        <img src="assets/images/site/catalog2.webp" alt="Student connecting with scholars via live Q&A" width="400" height="450" class="w-full max-w-xs rounded-2xl shadow-lg" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 6: DREAM OUTCOME — "DAY 30"          -->
+    <!-- ============================================ -->
+    <section class="warm-section py-16 sm:py-24">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="fade-up text-center mb-10">
+                <p class="kicker-gold mb-3">The Transformation</p>
+                <h2 class="font-serif text-navy text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight accent-line-gold">
+                    Thirty days from now.
+                </h2>
+            </div>
+
+            <div class="fade-up space-y-5 text-slate text-base sm:text-lg leading-relaxed">
+                <p>It's a Tuesday morning. Your phone buzzes — today's verse is about tawakkul. You read the tafsir while waiting for the kettle. You already know the concept because Shaykh Yasir Qadhi covered it in the theology course you finished last week.</p>
+                <p>Your streak counter says 30. <strong>You've completed 2 courses and you're halfway through a third.</strong> When your coworker asks about Islamic inheritance law at lunch, <strong>you explain the basics — calmly, correctly</strong>, from a course you took on your commute.</p>
+                <p>At your family's dinner, your mother quotes a hadith. Instead of nodding politely, <strong>you add context</strong> you learned from Ustadha Yasmin Mogahed's lecture on spiritual patience.</p>
+                <p>You're not a scholar. You don't need to be. But <strong>you're no longer the person who freezes</strong> when someone asks "why do Muslims...?"</p>
+                <p class="font-serif text-navy text-xl sm:text-2xl font-semibold italic text-center pt-4">The gap is closing. Five minutes at a time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 7: SCHOLAR SHOWCASE                  -->
+    <!-- ============================================ -->
+    <section class="py-16 sm:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="fade-up text-center mb-10">
+                <p class="kicker-purple mb-3">Your Teachers</p>
+                <h2 class="font-serif text-navy text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight accent-line">
+                    Scholars you can trust.
+                </h2>
+            </div>
+
+            <!-- Horizontal scholar cards -->
+            <div class="space-y-4">
+                <!-- Dr. Yasir Qadhi -->
+                <div class="fade-up lift flex flex-col sm:flex-row bg-gray-50 rounded-2xl overflow-hidden border border-gray-200">
+                    <div class="sm:w-48 lg:w-56 flex-shrink-0">
+                        <img src="assets/images/instructors/Suleiman.webp" alt="Dr. Yasir Qadhi" class="w-full h-48 sm:h-full object-cover object-top" loading="lazy">
+                    </div>
+                    <div class="p-5 sm:p-6 flex flex-col justify-center">
+                        <p class="text-primary text-xs font-semibold tracking-wide uppercase mb-1">5 Courses</p>
+                        <h3 class="font-serif font-bold text-navy text-xl mb-2">Dr. Yasir Qadhi</h3>
+                        <p class="text-slate-mid text-sm leading-relaxed">PhD from Yale. 5 courses on Islamic creed including <em>Faith & Belief</em>, <em>Pillars of Faith</em>, and <em>Predestination</em>.</p>
+                    </div>
+                </div>
+
+                <!-- Shaykh Omar Suleiman -->
+                <div class="fade-up lift flex flex-col sm:flex-row bg-gray-50 rounded-2xl overflow-hidden border border-gray-200">
+                    <div class="sm:w-48 lg:w-56 flex-shrink-0">
+                        <img src="assets/images/instructors/OmarSuleiman.webp" alt="Shaykh Omar Suleiman" class="w-full h-48 sm:h-full object-cover object-top" loading="lazy">
+                    </div>
+                    <div class="p-5 sm:p-6 flex flex-col justify-center">
+                        <p class="text-primary text-xs font-semibold tracking-wide uppercase mb-1">4 Courses</p>
+                        <h3 class="font-serif font-bold text-navy text-xl mb-2">Shaykh Omar Suleiman</h3>
+                        <p class="text-slate-mid text-sm leading-relaxed">Founder of Yaqeen Institute. 4 courses including <em>Through the Fire</em> (17 lectures) and <em>Purity of the Heart</em>.</p>
+                    </div>
+                </div>
+
+                <!-- Ustadha Yasmin Mogahed -->
+                <div class="fade-up lift flex flex-col sm:flex-row bg-gray-50 rounded-2xl overflow-hidden border border-gray-200">
+                    <div class="sm:w-48 lg:w-56 flex-shrink-0">
+                        <img src="assets/images/instructors/Yasmin.webp" alt="Ustadha Yasmin Mogahed" class="w-full h-48 sm:h-full object-cover object-top" loading="lazy">
+                    </div>
+                    <div class="p-5 sm:p-6 flex flex-col justify-center">
+                        <p class="text-primary text-xs font-semibold tracking-wide uppercase mb-1">1 Course · 19 Lectures</p>
+                        <h3 class="font-serif font-bold text-navy text-xl mb-2">Ustadha Yasmin Mogahed</h3>
+                        <p class="text-slate-mid text-sm leading-relaxed">Author of <em>Reclaim Your Heart</em>. Her 19-lecture <em>Purification of the Heart</em> is where you go when the struggle isn't intellectual — it's emotional.</p>
+                    </div>
+                </div>
+
+                <!-- Shaykh Waleed Basyouni -->
+                <div class="fade-up lift flex flex-col sm:flex-row bg-gray-50 rounded-2xl overflow-hidden border border-gray-200">
+                    <div class="sm:w-48 lg:w-56 flex-shrink-0">
+                        <img src="assets/images/instructors/Waleed.webp" alt="Shaykh Waleed Basyouni" class="w-full h-48 sm:h-full object-cover object-top" loading="lazy">
+                    </div>
+                    <div class="p-5 sm:p-6 flex flex-col justify-center">
+                        <p class="text-primary text-xs font-semibold tracking-wide uppercase mb-1">7 Courses</p>
+                        <h3 class="font-serif font-bold text-navy text-xl mb-2">Shaykh Waleed Basyouni</h3>
+                        <p class="text-slate-mid text-sm leading-relaxed">25+ years of scholarship. 7 courses — the most on the platform — from <em>Journey to the Hereafter</em> (26 lectures) to <em>Names of Allah</em>.</p>
+                    </div>
+                </div>
+
+                <!-- Shaykh Abu Eesa -->
+                <div class="fade-up lift flex flex-col sm:flex-row bg-gray-50 rounded-2xl overflow-hidden border border-gray-200">
+                    <div class="sm:w-48 lg:w-56 flex-shrink-0">
+                        <img src="assets/images/instructors/AbuEesa.webp" alt="Shaykh Abu Eesa Niamatullah" class="w-full h-48 sm:h-full object-cover object-top" loading="lazy">
+                    </div>
+                    <div class="p-5 sm:p-6 flex flex-col justify-center">
+                        <p class="text-primary text-xs font-semibold tracking-wide uppercase mb-1">6 Courses</p>
+                        <h3 class="font-serif font-bold text-navy text-xl mb-2">Shaykh Abu Eesa Niamatullah</h3>
+                        <p class="text-slate-mid text-sm leading-relaxed">6 courses including <em>Fiqh of Prayer</em> (21 lectures). Makes classical knowledge feel like a conversation, not a textbook.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plus 5 more -->
+            <div class="fade-up text-center mt-8">
+                <p class="text-slate-mid text-sm">
+                    Plus <span class="text-navy font-medium">Taimiyyah Zubair</span>,
+                    <span class="text-navy font-medium">Abdullah Hakim Quick</span>,
+                    <span class="text-navy font-medium">Saad Tasleem</span>,
+                    <span class="text-navy font-medium">Omar Hedroug</span>, and
+                    <span class="text-navy font-medium">Riad Ouarzazi</span>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 8: COURSE LIBRARY PREVIEW            -->
+    <!-- ============================================ -->
+    <section class="py-16 sm:py-24 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="fade-up text-center mb-12">
+                <p class="kicker-purple mb-3">The Library</p>
+                <h2 class="font-serif text-navy text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight accent-line">
+                    Whether you're starting from scratch or going deeper — there's a path.
+                </h2>
+                <p class="text-slate-mid text-base sm:text-lg mt-4 max-w-2xl mx-auto">32 courses. 400 lectures. Nearly 80 hours. Seven categories covering every major area of Islamic knowledge.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <!-- Fiqh -->
+                <div class="fade-up lift bg-white rounded-2xl overflow-hidden border border-gray-200">
+                    <div class="grid grid-cols-2 gap-px">
+                        <img src="assets/images/courses/understandingprayer.webp" alt="Fiqh of Prayer" width="200" height="130" class="w-full h-28 object-cover" loading="lazy">
+                        <img src="assets/images/courses/fiqhofpurification.webp" alt="Fiqh of Purification" width="200" height="130" class="w-full h-28 object-cover" loading="lazy">
+                    </div>
+                    <div class="p-5">
+                        <p class="text-primary font-semibold text-xs tracking-wide uppercase mb-1">11 Courses · Fiqh</p>
+                        <h3 class="font-serif font-bold text-navy text-lg mb-2">Jurisprudence</h3>
+                        <p class="text-slate-mid text-sm leading-relaxed">Prayer, purification, fasting, hajj, food, clothing, marriage, death, entertainment, Ramadan, and zakah. Not just the how, but the why.</p>
+                    </div>
+                </div>
+
+                <!-- Theology -->
+                <div class="fade-up lift bg-white rounded-2xl overflow-hidden border border-gray-200">
+                    <div class="grid grid-cols-2 gap-px">
+                        <img src="assets/images/courses/pillars.webp" alt="Pillars of Faith" width="200" height="130" class="w-full h-28 object-cover" loading="lazy">
+                        <img src="assets/images/courses/whatisfaith.webp" alt="What Is Faith" width="200" height="130" class="w-full h-28 object-cover" loading="lazy">
+                    </div>
+                    <div class="p-5">
+                        <p class="text-primary font-semibold text-xs tracking-wide uppercase mb-1">5 Courses · Theology</p>
+                        <h3 class="font-serif font-bold text-navy text-lg mb-2">Belief</h3>
+                        <p class="text-slate-mid text-sm leading-relaxed"><em>Faith &amp; Belief</em>, <em>Pillars of Faith</em>, <em>Predestination</em>, <em>What Is Faith</em>, <em>Names of Allah</em>. What you believe, and why it matters.</p>
+                    </div>
+                </div>
+
+                <!-- Spiritual Development -->
+                <div class="fade-up lift bg-white rounded-2xl overflow-hidden border border-gray-200">
+                    <div class="grid grid-cols-2 gap-px">
+                        <img src="assets/images/courses/purificationofheart.webp" alt="Purification of the Heart" width="200" height="130" class="w-full h-28 object-cover" loading="lazy">
+                        <img src="assets/images/courses/valleyofseekers.webp" alt="Valley of the Seekers" width="200" height="130" class="w-full h-28 object-cover" loading="lazy">
+                    </div>
+                    <div class="p-5">
+                        <p class="text-primary font-semibold text-xs tracking-wide uppercase mb-1">4 Courses · Spiritual</p>
+                        <h3 class="font-serif font-bold text-navy text-lg mb-2">Inner Growth</h3>
+                        <p class="text-slate-mid text-sm leading-relaxed">Ustadha Yasmin Mogahed's <em>Purification of the Heart</em> (19 lectures). Shaykh Riad Ouarzazi's <em>Valley of the Seekers</em> (29 lectures). For when the struggle is internal.</p>
+                    </div>
+                </div>
+
+                <!-- History -->
+                <div class="fade-up lift bg-white rounded-2xl overflow-hidden border border-gray-200">
+                    <img src="assets/images/courses/newdawn.webp" alt="New Dawn" width="400" height="130" class="w-full h-28 object-cover" loading="lazy">
+                    <div class="p-5">
+                        <p class="text-primary font-semibold text-xs tracking-wide uppercase mb-1">3 Courses · History</p>
+                        <h3 class="font-serif font-bold text-navy text-lg mb-2">Narrative</h3>
+                        <p class="text-slate-mid text-sm leading-relaxed"><em>Through the Fire</em>, <em>Unbroken</em>, <em>New Dawn</em>. Islamic history as narrative, not textbook.</p>
+                    </div>
+                </div>
+
+                <!-- Contemporary Life -->
+                <div class="fade-up lift bg-white rounded-2xl overflow-hidden border border-gray-200">
+                    <div class="grid grid-cols-2 gap-px">
+                        <img src="assets/images/courses/money.webp" alt="Money Matters" width="200" height="130" class="w-full h-28 object-cover" loading="lazy">
+                        <img src="assets/images/courses/familymatters.webp" alt="Family Life" width="200" height="130" class="w-full h-28 object-cover" loading="lazy">
+                    </div>
+                    <div class="p-5">
+                        <p class="text-primary font-semibold text-xs tracking-wide uppercase mb-1">3 Courses · Life</p>
+                        <h3 class="font-serif font-bold text-navy text-lg mb-2">Modern Living</h3>
+                        <p class="text-slate-mid text-sm leading-relaxed">Money, family, and living as a Muslim minority. Islam applied to the life you're actually living.</p>
+                    </div>
+                </div>
+
+                <!-- Worship Enhancement -->
+                <div class="fade-up lift bg-white rounded-2xl overflow-hidden border border-gray-200">
+                    <img src="assets/images/courses/soul.webp" alt="Worship Enhancement" width="400" height="130" class="w-full h-28 object-cover" loading="lazy">
+                    <div class="p-5">
+                        <p class="text-primary font-semibold text-xs tracking-wide uppercase mb-1">4 Courses · Worship</p>
+                        <h3 class="font-serif font-bold text-navy text-lg mb-2">Enhancement</h3>
+                        <p class="text-slate-mid text-sm leading-relaxed"><em>Journey to the Hereafter</em> (26 lectures), <em>Timeless Expression</em> (34 lectures — the deepest course), <em>Meaning of Salah</em>, <em>Fiqh of Du'a &amp; Dhikr</em>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Islamic Sciences note -->
+            <div class="fade-up text-center mt-8">
+                <p class="text-slate-mid text-sm">Plus <strong>3 Islamic Sciences courses</strong>: <em>Principles of Islamic Law</em>, <em>Muslim Ethics</em>, <em>Sunnah &amp; Bid'ah</em> — the frameworks underneath everything else.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 9: SOCIAL PROOF                      -->
+    <!-- ============================================ -->
+    <section class="py-16 sm:py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="fade-up text-center mb-12">
+                <p class="kicker-purple mb-3">Community</p>
+                <h2 class="font-serif text-navy text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight accent-line">
+                    10,000+ Muslims chose structure over scrolling.
+                </h2>
+            </div>
+
+            <!-- Hafsah Testimonial (medium length) -->
+            <div class="fade-up bg-warm rounded-2xl p-8 sm:p-10 mb-10 relative">
+                <div class="quote-mark absolute top-4 left-6">"</div>
+                <div class="relative z-10 max-w-3xl mx-auto">
+                    <blockquote class="text-slate text-base sm:text-lg leading-relaxed space-y-4 italic">
+                        <p>"I signed my daughter up because I could see her drifting. She'd stopped asking questions about Islam. She'd stopped praying regularly. My talks weren't working, and I'm not a scholar.</p>
+                        <p>Within two weeks, she was telling ME things she'd learned from Shaykh Omar Suleiman's course. She started a streak and got genuinely upset when she almost broke it. Now she listens to the morning adhkar while getting ready for class.</p>
+                        <p>I didn't give her a lecture. I gave her Faith Essentials. And it did what my words couldn't."</p>
+                    </blockquote>
+                    <div class="mt-6 flex items-center gap-3">
+                        <div class="w-1 h-10 bg-gold rounded-full"></div>
+                        <div>
+                            <p class="font-semibold text-navy text-sm">Hafsah M.</p>
+                            <p class="text-slate-mid text-xs">Mother of a college student</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More testimonials -->
+            <div class="grid sm:grid-cols-3 gap-6">
+                <div class="fade-up bg-gray-50 rounded-xl p-6 border border-gray-200">
+                    <p class="text-slate text-sm leading-relaxed italic mb-4">"Faith Essentials has helped clarify some issues for me that tend to gnaw at me. And it is those kinds of questions that — if left unanswered — can turn into waswas and end up affecting my ibadah."</p>
+                    <p class="text-slate-mid text-xs font-semibold">Sakeena Sheikh · FE Student</p>
+                </div>
+                <div class="fade-up bg-gray-50 rounded-xl p-6 border border-gray-200">
+                    <p class="text-slate text-sm leading-relaxed italic mb-4">"I have learned so much that some information on each course I never knew before. MashaAllah I'm so glad to have our great teachers as our learning source."</p>
+                    <p class="text-slate-mid text-xs font-semibold">Jameel Zafar · FE Student</p>
+                </div>
+                <div class="fade-up bg-gray-50 rounded-xl p-6 border border-gray-200">
+                    <p class="text-slate text-sm leading-relaxed italic mb-4">"I like that it is in simple language. It gives me an opportunity to ask follow up questions and also the price as it is something that I can afford alhamdouillah."</p>
+                    <p class="text-slate-mid text-xs font-semibold">Zak Rashid · FE Student</p>
+                </div>
+            </div>
+
+            <!-- Supporting proof -->
+            <div class="fade-up flex flex-wrap justify-center gap-6 mt-10 text-slate-mid text-sm">
+                <span class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    Built on AlMaghrib Institute's 20-year track record
+                </span>
+                <span class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    Available on iOS, Android, and web
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 10: OBJECTION HANDLING (FAQ)          -->
+    <!-- ============================================ -->
+    <section class="py-16 sm:py-24 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="fade-up text-center mb-12">
+                <p class="kicker-purple mb-3">FAQ</p>
+                <h2 class="font-serif text-navy text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight accent-line">
+                    Your questions, answered honestly.
+                </h2>
+            </div>
+
+            <div class="space-y-3">
+                <div class="fade-up faq-item bg-white rounded-xl border border-gray-200 overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" aria-expanded="false">
+                        <span class="font-semibold text-navy text-base pr-4">There's so much free Islamic content on YouTube. Why would I pay?</span>
+                        <span class="faq-icon text-primary text-2xl font-light flex-shrink-0">+</span>
+                    </button>
+                    <div class="faq-answer px-5 pb-0">
+                        <p class="text-slate-mid text-sm leading-relaxed pb-5">YouTube has 10,000 Islamic videos and no curriculum. Faith Essentials has structured courses, a daily practice, live Q&amp;A, and an AI assistant. One builds knowledge. The other kills time.</p>
+                    </div>
+                </div>
+
+                <div class="fade-up faq-item bg-white rounded-xl border border-gray-200 overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" aria-expanded="false">
+                        <span class="font-semibold text-navy text-base pr-4">I don't have time to study.</span>
+                        <span class="faq-icon text-primary text-2xl font-light flex-shrink-0">+</span>
+                    </button>
+                    <div class="faq-answer px-5 pb-0">
+                        <p class="text-slate-mid text-sm leading-relaxed pb-5">The daily habit is 5 minutes. Courses are 10-15 minute lessons you can download and listen to on your commute. This was built for busy Muslims, not full-time students.</p>
+                    </div>
+                </div>
+
+                <div class="fade-up faq-item bg-white rounded-xl border border-gray-200 overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" aria-expanded="false">
+                        <span class="font-semibold text-navy text-base pr-4">I always start things like this and quit.</span>
+                        <span class="faq-icon text-primary text-2xl font-light flex-shrink-0">+</span>
+                    </button>
+                    <div class="faq-answer px-5 pb-0">
+                        <p class="text-slate-mid text-sm leading-relaxed pb-5">The streak counter, daily push notifications, and home screen widget make quitting harder than continuing. You don't have to remember to learn — the app remembers for you.</p>
+                    </div>
+                </div>
+
+                <div class="fade-up faq-item bg-white rounded-xl border border-gray-200 overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" aria-expanded="false">
+                        <span class="font-semibold text-navy text-base pr-4">$15 a month feels like a lot.</span>
+                        <span class="faq-icon text-primary text-2xl font-light flex-shrink-0">+</span>
+                    </button>
+                    <div class="faq-answer px-5 pb-0">
+                        <p class="text-slate-mid text-sm leading-relaxed pb-5">That's $0.50 a day. One AlMaghrib seminar costs $200+. Go annual and it's $10/month. The price of a coffee for access to 10 scholars.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 11: PRICING & VALUE STACK            -->
+    <!-- ============================================ -->
+    <section id="pricing" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="fade-up text-center mb-12">
+                <p class="kicker-purple mb-3">Pricing</p>
+                <h2 class="font-serif text-navy text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight accent-line">
+                    What would you pay to close the gap?
+                </h2>
+            </div>
+
+            <!-- Value stack table -->
+            <div class="fade-up overflow-x-auto mb-6">
+                <table class="value-table w-full text-left text-sm border border-gray-200 rounded-xl overflow-hidden">
+                    <thead>
+                        <tr class="bg-navy text-white">
+                            <th class="py-3 px-4 sm:px-6 font-semibold">What you're getting</th>
+                            <th class="py-3 px-4 sm:px-6 font-semibold text-right">What it costs elsewhere</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-slate">
+                        <tr>
+                            <td class="py-3 px-4 sm:px-6">32 structured courses (equivalent of 16+ AlMaghrib seminars)</td>
+                            <td class="py-3 px-4 sm:px-6 text-right font-semibold text-primary">$3,200+</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 sm:px-6">Weekly live Q&amp;A with scholars</td>
+                            <td class="py-3 px-4 sm:px-6 text-right font-semibold text-primary">$50-100/session</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 sm:px-6">AI-powered Islamic assistant (24/7)</td>
+                            <td class="py-3 px-4 sm:px-6 text-right font-semibold text-primary">$20-30/month</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 sm:px-6">Daily verse + tafsir + morning adhkar</td>
+                            <td class="py-3 px-4 sm:px-6 text-right font-semibold text-primary">Doesn't exist elsewhere</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 sm:px-6">Streak tracking + progress dashboard + home screen widget</td>
+                            <td class="py-3 px-4 sm:px-6 text-right font-semibold text-primary">Built in</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 sm:px-6">Offline downloads for all courses</td>
+                            <td class="py-3 px-4 sm:px-6 text-right font-semibold text-primary">Included</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 sm:px-6">Total standalone value</td>
+                            <td class="py-3 px-4 sm:px-6 text-right font-semibold text-primary">$4,000+/year</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Pricing cards -->
+            <div class="grid sm:grid-cols-2 gap-6 mb-8">
+                <!-- Monthly -->
+                <div class="fade-up lift bg-white rounded-2xl p-6 sm:p-8 border border-gray-200 shadow-sm text-center">
+                    <h3 class="font-serif font-bold text-navy text-xl mb-1">Monthly</h3>
+                    <div class="flex items-baseline justify-center gap-1 mb-2">
+                        <span class="font-serif text-4xl font-bold text-slate">$15</span>
+                        <span class="text-slate-light text-sm">/month</span>
+                    </div>
+                    <p class="text-slate-mid text-sm mb-1">That's $0.50/day.</p>
+                    <p class="text-slate-light text-xs mb-6">Cancel with one tap.</p>
+                    <a href="#" class="block w-full py-3 bg-gray-100 text-slate font-bold rounded-xl hover:bg-gray-200 transition-colors">
+                        Start Monthly — $15/month
+                    </a>
+                    <p class="text-slate-light text-xs mt-3">Full access. Cancel anytime.</p>
+                </div>
+
+                <!-- Annual (highlighted) -->
+                <div class="fade-up lift pricing-popular bg-white rounded-2xl p-6 sm:p-8 shadow-md text-center">
+                    <h3 class="font-serif font-bold text-navy text-xl mb-1">Annual</h3>
+                    <div class="flex items-baseline justify-center gap-1 mb-1">
+                        <span class="font-serif text-4xl font-bold text-primary">$120</span>
+                        <span class="text-slate-light text-sm">/year</span>
+                    </div>
+                    <p class="text-primary font-semibold text-sm mb-1">$10/month — Save $60</p>
+                    <p class="text-slate-light text-xs mb-6">Less than a single AlMaghrib seminar for a full year.</p>
+                    <a href="#" class="block w-full py-3 bg-cta text-white font-bold rounded-xl hover:bg-cta-hover transition-colors shadow-lg shadow-cta/20">
+                        Go Annual — $120/year
+                    </a>
+                    <p class="text-slate-light text-xs mt-3">Save $60. That's 4 months free.</p>
+                </div>
+            </div>
+
+            <!-- Guarantee -->
+            <div class="fade-up text-center">
+                <div class="inline-flex items-center gap-2.5 bg-primary-light border border-primary/15 rounded-full px-6 py-2.5 shadow-sm">
+                    <svg class="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    <span class="text-slate text-sm font-medium">Try it for 30 days. If you don't feel closer to your deen, cancel with one tap. No questions. No guilt. No contract.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 12: FINAL CTA + FOOTER               -->
+    <!-- ============================================ -->
+    <section class="py-16 sm:py-24 bg-navy text-white text-center">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="fade-up">
+                <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight mb-6">
+                    The gap doesn't close itself.
+                </h2>
+                <p class="text-white/70 text-base sm:text-lg leading-relaxed mb-4">Every day you wait is another day the distance grows — between what you feel and what you know.</p>
+                <p class="text-white/70 text-base sm:text-lg leading-relaxed mb-4">Faith Essentials won't make you a scholar overnight. But it will give you <strong class="text-white">5 minutes every morning</strong> that add up into something that lasts.</p>
+                <p class="font-serif text-xl sm:text-2xl font-semibold italic mb-10" style="color: #E8C97A;">You don't need to know everything. You just need to start.</p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                    <a href="#pricing" class="inline-flex items-center justify-center px-8 py-4 bg-white text-navy font-bold text-base rounded-xl hover:bg-gray-50 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-0.5">
+                        Start Learning Today
+                    </a>
+                    <a href="#courses" class="inline-flex items-center justify-center px-8 py-3.5 border-2 border-white/30 text-white font-semibold text-base rounded-xl hover:border-white/60 hover:bg-white/10 transition-colors">
+                        See All 32 Courses
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust bar -->
+    <div class="bg-navy border-t border-white/10 py-4 relative">
+        <div class="absolute -top-px left-1/2 -translate-x-1/2 flex gap-1.5">
+            <span class="w-1 h-1 bg-gold rounded-full"></span>
+            <span class="w-1 h-1 bg-gold rounded-full"></span>
+            <span class="w-1 h-1 bg-gold rounded-full"></span>
+        </div>
+        <div class="max-w-5xl mx-auto px-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/50 text-xs sm:text-sm">
+            <span>AlMaghrib Institute</span>
+            <span class="text-gold">·</span>
+            <span>20 Years of Islamic Education</span>
+            <span class="text-gold">·</span>
+            <span>10,000+ Students</span>
+            <span class="text-gold">·</span>
+            <span>Cancel Anytime</span>
+            <span class="text-gold">·</span>
+            <span>iOS + Android + Web</span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-navy pt-8 pb-6 border-t border-white/5">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-2">
+                    <span class="font-serif font-bold text-white text-lg">Faith Essentials</span>
+                    <span class="text-white/30 text-xs">by AlMaghrib Institute</span>
+                </div>
+                <nav class="flex flex-wrap justify-center gap-x-5 gap-y-2 text-white/40 text-xs sm:text-sm">
+                    <a href="#" class="hover:text-white/70 transition-colors">About</a>
+                    <a href="#" class="hover:text-white/70 transition-colors">Courses</a>
+                    <a href="#" class="hover:text-white/70 transition-colors">Scholars</a>
+                    <a href="#" class="hover:text-white/70 transition-colors">FAQ</a>
+                    <a href="#" class="hover:text-white/70 transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white/70 transition-colors">Terms</a>
+                    <a href="#" class="hover:text-white/70 transition-colors">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================ -->
+    <!-- FLOATING MOBILE CTA BAR                      -->
+    <!-- ============================================ -->
+    <div id="mobileCta" class="mobile-cta-bar fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-sm border-t border-gray-200 p-3 sm:hidden">
+        <a href="#pricing" class="block w-full py-3 bg-cta text-white text-center font-bold rounded-xl shadow-lg shadow-cta/20">
+            Start Learning — $0.50/Day
+        </a>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- JAVASCRIPT                                   -->
+    <!-- ============================================ -->
+    <script>
+        // Sticky header — show after scrolling past hero
+        const stickyHeader = document.getElementById('stickyHeader');
+        const hero = document.getElementById('hero');
+        const headerObserver = new IntersectionObserver(([entry]) => {
+            stickyHeader.classList.toggle('show', !entry.isIntersecting);
+        }, { threshold: 0 });
+        headerObserver.observe(hero);
+
+        // Floating mobile CTA — hide when pricing is visible
+        const mobileCta = document.getElementById('mobileCta');
+        const pricing = document.getElementById('pricing');
+        const pricingObserver = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                mobileCta.classList.remove('show');
+            } else {
+                mobileCta.classList.add('show');
+            }
+        }, { threshold: 0.1 });
+
+        // Show mobile CTA after scrolling past hero
+        const mobileCtaObserver = new IntersectionObserver(([entry]) => {
+            if (!entry.isIntersecting) {
+                mobileCta.classList.add('show');
+            } else {
+                mobileCta.classList.remove('show');
+            }
+        }, { threshold: 0 });
+        mobileCtaObserver.observe(hero);
+        pricingObserver.observe(pricing);
+
+        // Scroll-triggered fade-in animations
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    fadeObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.01, rootMargin: '50px' });
+
+        document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
+
+        // Counter animation
+        function animateCounter(el) {
+            const target = parseInt(el.dataset.target);
+            const suffix = el.dataset.suffix || '';
+            const duration = 1500;
+            const start = performance.now();
+
+            function update(now) {
+                const elapsed = now - start;
+                const progress = Math.min(elapsed / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                const current = Math.round(eased * target);
+
+                if (target >= 1000) {
+                    el.textContent = current.toLocaleString() + suffix;
+                } else {
+                    el.textContent = current + suffix;
+                }
+
+                if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+        }
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('.counter[data-target]').forEach(el => counterObserver.observe(el));
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-toggle').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.closest('.faq-item');
+                const answer = item.querySelector('.faq-answer');
+                const isOpen = item.classList.contains('active');
+
+                // Close all
+                document.querySelectorAll('.faq-item.active').forEach(active => {
+                    active.classList.remove('active');
+                    active.querySelector('.faq-answer').classList.remove('open');
+                    active.querySelector('.faq-toggle').setAttribute('aria-expanded', 'false');
+                });
+
+                // Open clicked (if wasn't open)
+                if (!isOpen) {
+                    item.classList.add('active');
+                    answer.classList.add('open');
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
