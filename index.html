@@ -3,285 +3,417 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faith Essentials — Landing Page Variants</title>
+    <title>Faith Essentials — Landing Page Review</title>
     <link rel="icon" type="image/png" href="assets/images/site/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#7A00DF',
-                        'primary-dark': '#6200B3',
-                        'primary-light': '#F3E8FF',
-                        navy: '#0F172A',
-                        slate: '#1E293B',
-                        'slate-mid': '#475569',
-                        'slate-light': '#94A3B8',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
     <style>
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Inter', system-ui, sans-serif; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            color: #24292e;
+            background: #fff;
+        }
+        h1 {
+            font-size: 2rem;
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.3rem;
+        }
+        h3 {
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        th, td {
+            border: 1px solid #dfe2e5;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th {
+            background: #f6f8fa;
+            font-weight: 600;
+        }
+        tr:nth-child(even) {
+            background: #f6f8fa;
+        }
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #eaecef;
+            margin: 2rem 0;
+        }
+        code {
+            background: #f6f8fa;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+        .links {
+            background: #f6f8fa;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+        }
+        .links a {
+            display: block;
+            margin: 0.5rem 0;
+        }
+        .pass { color: #22863a; }
+        .warn { color: #b08800; }
+        blockquote {
+            border-left: 4px solid #dfe2e5;
+            margin: 1rem 0;
+            padding: 0.5rem 1rem;
+            color: #6a737d;
+            background: #f6f8fa;
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-slate min-h-screen">
+<body>
 
-    <!-- Header -->
-    <header class="bg-white border-b border-gray-200">
-        <div class="max-w-4xl mx-auto px-6 py-8">
-            <div class="flex items-center gap-3 mb-2">
-                <span class="inline-block bg-primary-light text-primary px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">Internal Review</span>
-            </div>
-            <h1 class="text-3xl md:text-4xl font-bold text-navy mb-3">Faith Essentials Landing Page Variants</h1>
-            <p class="text-slate-mid text-lg">Three concepts for colleague review — same product, different emotional entry points</p>
-        </div>
-    </header>
+<h1>FAITH ESSENTIALS LANDING PAGE EXPERIMENT</h1>
 
-    <main class="max-w-4xl mx-auto px-6 py-10">
+<table>
+    <thead>
+        <tr>
+            <th>Version A</th>
+            <th>Version B</th>
+            <th>Version C</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="version-a.html"><strong>"The Grounding"</strong></a></td>
+            <td><a href="version-b.html"><strong>"The Scholars"</strong></a></td>
+            <td><a href="version-c.html"><strong>"The Gift"</strong></a></td>
+        </tr>
+        <tr>
+            <td>Identity / Crisis</td>
+            <td>Access / Authority</td>
+            <td>Family / Community</td>
+        </tr>
+        <tr>
+            <td><em>22-35, reconnecting</em></td>
+            <td><em>28-45, structured learner</em></td>
+            <td><em>30-50, parent/guardian</em></td>
+        </tr>
+    </tbody>
+</table>
 
-        <!-- Purpose Section -->
-        <section class="mb-12">
-            <h2 class="text-xl font-semibold text-navy mb-4 flex items-center gap-2">
-                <span class="w-1.5 h-6 bg-primary rounded-full"></span>
-                Purpose
-            </h2>
-            <div class="bg-white rounded-xl p-6 border border-gray-200">
-                <p class="text-slate-mid leading-relaxed">
-                    Three landing page concepts targeting different personas for <strong class="text-slate">Faith Essentials</strong> — an Islamic education subscription by AlMaghrib Institute. Each follows the same Hormozi persuasion framework but enters through a different emotional angle to test which resonates best with our audience segments.
-                </p>
-            </div>
-        </section>
+<p>Three landing page variants for the same product (Faith Essentials by AlMaghrib Institute). Different emotional entry points. Built on the Hormozi framework. Ready for A/B testing.</p>
 
-        <!-- Version Cards -->
-        <section class="mb-12">
-            <h2 class="text-xl font-semibold text-navy mb-6 flex items-center gap-2">
-                <span class="w-1.5 h-6 bg-primary rounded-full"></span>
-                The Versions
-            </h2>
+<hr>
 
-            <div class="space-y-6">
+<h2>1. The Experiment</h2>
 
-                <!-- Version A -->
-                <a href="version-a.html" class="block bg-white rounded-xl border border-gray-200 hover:border-primary hover:shadow-lg transition-all duration-200 overflow-hidden group">
-                    <div class="p-6">
-                        <div class="flex items-start justify-between mb-4">
-                            <div>
-                                <span class="inline-block bg-purple-100 text-primary px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide mb-3">Version A</span>
-                                <h3 class="text-xl font-bold text-navy group-hover:text-primary transition-colors">"The Grounding"</h3>
-                            </div>
-                            <svg class="w-6 h-6 text-slate-light group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </div>
-                        <div class="grid md:grid-cols-2 gap-4 text-sm">
-                            <div>
-                                <p class="text-slate-light font-medium mb-1">Angle</p>
-                                <p class="text-slate">Identity / Crisis</p>
-                            </div>
-                            <div>
-                                <p class="text-slate-light font-medium mb-1">Persona</p>
-                                <p class="text-slate">"Searching Salma" (22-35, reconnecting)</p>
-                            </div>
-                            <div>
-                                <p class="text-slate-light font-medium mb-1">Entry Point</p>
-                                <p class="text-slate">The quiet shame of not knowing enough</p>
-                            </div>
-                            <div>
-                                <p class="text-slate-light font-medium mb-1">Tone</p>
-                                <p class="text-slate">Warm, intimate, vulnerable</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+<h3>Hypothesis</h3>
+<p>Different segments of our audience arrive at Faith Essentials through fundamentally different emotional states. A single landing page forces everyone through the same door. By creating three distinct entry points, we can:</p>
+<ul>
+    <li>Match ad messaging to landing page experience (reducing drop-off)</li>
+    <li>Speak directly to the specific pain point that brought them here</li>
+    <li>Test which emotional angle converts best for each traffic source</li>
+</ul>
 
-                <!-- Version B -->
-                <a href="version-b.html" class="block bg-white rounded-xl border border-gray-200 hover:border-primary hover:shadow-lg transition-all duration-200 overflow-hidden group">
-                    <div class="p-6">
-                        <div class="flex items-start justify-between mb-4">
-                            <div>
-                                <span class="inline-block bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide mb-3">Version B</span>
-                                <h3 class="text-xl font-bold text-navy group-hover:text-primary transition-colors">"The Scholars"</h3>
-                            </div>
-                            <svg class="w-6 h-6 text-slate-light group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </div>
-                        <div class="grid md:grid-cols-2 gap-4 text-sm">
-                            <div>
-                                <p class="text-slate-light font-medium mb-1">Angle</p>
-                                <p class="text-slate">Access / Authority</p>
-                            </div>
-                            <div>
-                                <p class="text-slate-light font-medium mb-1">Persona</p>
-                                <p class="text-slate">"Committed Kareem" (28-45, structured learner)</p>
-                            </div>
-                            <div>
-                                <p class="text-slate-light font-medium mb-1">Entry Point</p>
-                                <p class="text-slate">Frustration with scattered YouTube content</p>
-                            </div>
-                            <div>
-                                <p class="text-slate-light font-medium mb-1">Tone</p>
-                                <p class="text-slate">Confident, data-forward, premium</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+<h3>The Three Angles</h3>
 
-                <!-- Version C -->
-                <a href="version-c.html" class="block bg-white rounded-xl border border-gray-200 hover:border-primary hover:shadow-lg transition-all duration-200 overflow-hidden group">
-                    <div class="p-6">
-                        <div class="flex items-start justify-between mb-4">
-                            <div>
-                                <span class="inline-block bg-rose-100 text-rose-600 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide mb-3">Version C</span>
-                                <h3 class="text-xl font-bold text-navy group-hover:text-primary transition-colors">"The Gift"</h3>
-                            </div>
-                            <svg class="w-6 h-6 text-slate-light group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </div>
-                        <div class="grid md:grid-cols-2 gap-4 text-sm">
-                            <div>
-                                <p class="text-slate-light font-medium mb-1">Angle</p>
-                                <p class="text-slate">Family / Community</p>
-                            </div>
-                            <div>
-                                <p class="text-slate-light font-medium mb-1">Persona</p>
-                                <p class="text-slate">"Guardian" (30-50, worried parent)</p>
-                            </div>
-                            <div>
-                                <p class="text-slate-light font-medium mb-1">Entry Point</p>
-                                <p class="text-slate">Helplessness watching someone drift</p>
-                            </div>
-                            <div>
-                                <p class="text-slate-light font-medium mb-1">Tone</p>
-                                <p class="text-slate">Empathetic, parental, urgent</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </section>
+<table>
+    <thead>
+        <tr>
+            <th>Version</th>
+            <th>Angle</th>
+            <th>Target Segment</th>
+            <th>Core Insight</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>A: "The Grounding"</strong></td>
+            <td>Identity / Crisis</td>
+            <td>22-35, reconnecting with faith</td>
+            <td>They feel the gap between who they are and who they want to be. They're not looking for information — they're looking for grounding.</td>
+        </tr>
+        <tr>
+            <td><strong>B: "The Scholars"</strong></td>
+            <td>Access / Authority</td>
+            <td>28-45, committed learner</td>
+            <td>They're already studying but frustrated with fragmented YouTube content. They want structure, credentials, and a curriculum.</td>
+        </tr>
+        <tr>
+            <td><strong>C: "The Gift"</strong></td>
+            <td>Family / Community</td>
+            <td>30-50, parent or guardian</td>
+            <td>They're not the end user — they're watching someone they love drift. The purchase is an act of care, not self-improvement.</td>
+        </tr>
+    </tbody>
+</table>
 
-        <!-- Key Differences Table -->
-        <section class="mb-12">
-            <h2 class="text-xl font-semibold text-navy mb-6 flex items-center gap-2">
-                <span class="w-1.5 h-6 bg-primary rounded-full"></span>
-                Key Differences
-            </h2>
+<h3>Why These Three?</h3>
+<p>These aren't arbitrary personas. They map to the three most common paths to Islamic education platforms:</p>
+<ol>
+    <li><strong>Personal crisis</strong> — "I don't know enough and it's becoming a problem"</li>
+    <li><strong>Structured learning</strong> — "I want to study seriously but YouTube isn't cutting it"</li>
+    <li><strong>Gift/intervention</strong> — "Someone I care about needs this"</li>
+</ol>
+<p>Version C is particularly interesting — it's rarely addressed by competitors, but gift subscriptions and family purchases represent a significant segment.</p>
 
-            <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
-                <div class="overflow-x-auto">
-                    <table class="w-full text-sm">
-                        <thead>
-                            <tr class="bg-gray-50 border-b border-gray-200">
-                                <th class="text-left px-6 py-4 font-semibold text-slate-mid">Dimension</th>
-                                <th class="text-left px-6 py-4 font-semibold text-primary">Version A</th>
-                                <th class="text-left px-6 py-4 font-semibold text-amber-700">Version B</th>
-                                <th class="text-left px-6 py-4 font-semibold text-rose-600">Version C</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-100">
-                            <tr>
-                                <td class="px-6 py-4 font-medium text-slate">Emotional entry</td>
-                                <td class="px-6 py-4 text-slate-mid">First-person pain</td>
-                                <td class="px-6 py-4 text-slate-mid">First-person frustration</td>
-                                <td class="px-6 py-4 text-slate-mid">Third-person concern</td>
-                            </tr>
-                            <tr class="bg-gray-50/50">
-                                <td class="px-6 py-4 font-medium text-slate">Who is reader?</td>
-                                <td class="px-6 py-4 text-slate-mid">Person with the gap</td>
-                                <td class="px-6 py-4 text-slate-mid">Person who wants structure</td>
-                                <td class="px-6 py-4 text-slate-mid">Person watching someone else</td>
-                            </tr>
-                            <tr>
-                                <td class="px-6 py-4 font-medium text-slate">Lead section</td>
-                                <td class="px-6 py-4 text-slate-mid">Hero + Problem</td>
-                                <td class="px-6 py-4 text-slate-mid">Hero + Scholar Showcase</td>
-                                <td class="px-6 py-4 text-slate-mid">Hero + Testimonial</td>
-                            </tr>
-                            <tr class="bg-gray-50/50">
-                                <td class="px-6 py-4 font-medium text-slate">CTA language</td>
-                                <td class="px-6 py-4 text-slate-mid">"Start Learning"</td>
-                                <td class="px-6 py-4 text-slate-mid">"See All 32 Courses"</td>
-                                <td class="px-6 py-4 text-slate-mid">"Give the Gift of Knowledge"</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
+<hr>
 
-        <!-- Shared Elements -->
-        <section class="mb-12">
-            <h2 class="text-xl font-semibold text-navy mb-4 flex items-center gap-2">
-                <span class="w-1.5 h-6 bg-primary rounded-full"></span>
-                Shared Across All Versions
-            </h2>
-            <div class="bg-white rounded-xl p-6 border border-gray-200">
-                <div class="flex flex-wrap gap-3">
-                    <span class="inline-flex items-center gap-2 bg-gray-100 text-slate px-4 py-2 rounded-lg text-sm">
-                        <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                        32 courses
-                    </span>
-                    <span class="inline-flex items-center gap-2 bg-gray-100 text-slate px-4 py-2 rounded-lg text-sm">
-                        <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                        10 scholars
-                    </span>
-                    <span class="inline-flex items-center gap-2 bg-gray-100 text-slate px-4 py-2 rounded-lg text-sm">
-                        <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                        $15/mo or $120/yr
-                    </span>
-                    <span class="inline-flex items-center gap-2 bg-gray-100 text-slate px-4 py-2 rounded-lg text-sm">
-                        <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                        Same feature set
-                    </span>
-                    <span class="inline-flex items-center gap-2 bg-gray-100 text-slate px-4 py-2 rounded-lg text-sm">
-                        <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                        Hormozi framework
-                    </span>
-                </div>
-            </div>
-        </section>
+<h2>2. Distinctness Check</h2>
 
-        <!-- Quick Links -->
-        <section>
-            <div class="bg-primary-light rounded-xl p-6 border border-purple-200">
-                <h3 class="font-semibold text-navy mb-4">Quick Links</h3>
-                <div class="flex flex-wrap gap-4">
-                    <a href="version-a.html" class="inline-flex items-center gap-2 bg-white text-primary px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary hover:text-white transition-colors">
-                        View Version A
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                    </a>
-                    <a href="version-b.html" class="inline-flex items-center gap-2 bg-white text-primary px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary hover:text-white transition-colors">
-                        View Version B
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                    </a>
-                    <a href="version-c.html" class="inline-flex items-center gap-2 bg-white text-primary px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary hover:text-white transition-colors">
-                        View Version C
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                    </a>
-                </div>
-            </div>
-        </section>
+<p>For the experiment to be valid, the three versions must be genuinely different — not just cosmetic variations.</p>
 
-    </main>
+<table>
+    <thead>
+        <tr>
+            <th>Dimension</th>
+            <th>Version A</th>
+            <th>Version B</th>
+            <th>Version C</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Emotional entry</strong></td>
+            <td>First-person pain (I'm drifting)</td>
+            <td>First-person frustration (I want access)</td>
+            <td>Third-person concern (they're drifting)</td>
+        </tr>
+        <tr>
+            <td><strong>Who is the reader?</strong></td>
+            <td>The person with the gap</td>
+            <td>The person who wants structure</td>
+            <td>The person watching someone else</td>
+        </tr>
+        <tr>
+            <td><strong>Hero headline</strong></td>
+            <td>Algorithm critique</td>
+            <td>Scholar name-drop</td>
+            <td>Emotional address to guardian</td>
+        </tr>
+        <tr>
+            <td><strong>Lead section</strong></td>
+            <td>Hero + Problem agitation</td>
+            <td>Hero + Scholar showcase</td>
+            <td>Hero + Hafsah testimonial story</td>
+        </tr>
+        <tr>
+            <td><strong>Problem agitation</strong></td>
+            <td>Long, emotional, personal</td>
+            <td>Short, practical, late in page</td>
+            <td>Third-person, parental concern</td>
+        </tr>
+        <tr>
+            <td><strong>Primary CTA</strong></td>
+            <td>"Start Learning Today"</td>
+            <td>"See All 32 Courses"</td>
+            <td>"Give the Gift of Knowledge"</td>
+        </tr>
+        <tr>
+            <td><strong>Tone</strong></td>
+            <td>Warm, intimate, vulnerable</td>
+            <td>Confident, data-forward, premium</td>
+            <td>Empathetic, parental, urgent</td>
+        </tr>
+        <tr>
+            <td><strong>Typography</strong></td>
+            <td>Playfair Display (serif)</td>
+            <td>Montserrat (bold sans)</td>
+            <td>Lora (warm serif)</td>
+        </tr>
+    </tbody>
+</table>
 
-    <!-- Footer -->
-    <footer class="border-t border-gray-200 mt-12">
-        <div class="max-w-4xl mx-auto px-6 py-6 text-center text-sm text-slate-light">
-            Faith Essentials by AlMaghrib Institute — Internal Review Only
-        </div>
-    </footer>
+<p><strong>Assessment:</strong> The three versions are genuinely distinct. A reader would not confuse them. Each targets a different emotional state, uses a different structural emphasis, and speaks to a different persona.</p>
+
+<hr>
+
+<h2>3. Fact Consistency Check</h2>
+
+<p>While the emotional angles differ, all product facts must be consistent to avoid confusion and maintain trust.</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Fact</th>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+            <th>Consistent?</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>32 courses</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td class="pass">Yes</td>
+        </tr>
+        <tr>
+            <td>10 scholars/instructors</td>
+            <td>Yes</td>
+            <td>Yes (all 10 listed)</td>
+            <td>Yes</td>
+            <td class="pass">Yes</td>
+        </tr>
+        <tr>
+            <td>400 lectures</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td class="pass">Yes</td>
+        </tr>
+        <tr>
+            <td>$15/month</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td class="pass">Yes</td>
+        </tr>
+        <tr>
+            <td>$120/year</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td class="pass">Yes</td>
+        </tr>
+        <tr>
+            <td>$0.50/day framing</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td class="pass">Yes</td>
+        </tr>
+        <tr>
+            <td>10,000+ students</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td class="pass">Yes</td>
+        </tr>
+        <tr>
+            <td>~80 hours content</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Not cited</td>
+            <td class="warn">Acceptable</td>
+        </tr>
+        <tr>
+            <td>Weekly live Q&A</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td class="pass">Yes</td>
+        </tr>
+        <tr>
+            <td>AI assistant</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td class="pass">Yes</td>
+        </tr>
+        <tr>
+            <td>Offline downloads</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td class="pass">Yes</td>
+        </tr>
+    </tbody>
+</table>
+
+<p><strong>Assessment:</strong> All critical facts are consistent. Minor omissions in Version C are intentional — the gift angle prioritizes emotional resonance over technical features.</p>
+
+<hr>
+
+<h2>4. Ad-to-Page Alignment</h2>
+
+<p>Each version has matching ad copy designed for the same emotional angle:</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Version</th>
+            <th>Ad Variants</th>
+            <th>Hook-to-Hero Match</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>A</strong></td>
+            <td>3 ads (Question, 5-Minute Morning, The Drift)</td>
+            <td>Ad names the gap → Hero names the gap</td>
+        </tr>
+        <tr>
+            <td><strong>B</strong></td>
+            <td>3 ads (The Roster, Seminar Math, YouTube vs Curriculum)</td>
+            <td>Ad leads with scholars → Hero leads with scholars</td>
+        </tr>
+        <tr>
+            <td><strong>C</strong></td>
+            <td>3 ads (Hafsah's Story, Someone You Love, Family Plan)</td>
+            <td>Ad names concern for others → Hero names concern for others</td>
+        </tr>
+    </tbody>
+</table>
+
+<hr>
+
+<h2>5. Recommended Test Plan</h2>
+
+<h3>Phase 1: Internal Review (Current)</h3>
+<ul>
+    <li>Stakeholder feedback on messaging and tone</li>
+    <li>Legal/compliance review of claims</li>
+    <li>Mobile responsiveness check</li>
+</ul>
+
+<h3>Phase 2: A/B Test Setup</h3>
+<ul>
+    <li>Traffic split: route ad sets to matching landing pages</li>
+    <li>A ads → Version A, B ads → Version B, C ads → Version C</li>
+    <li>Track: CTR, time on page, scroll depth, conversion rate</li>
+</ul>
+
+<h3>Phase 3: Analysis</h3>
+<ul>
+    <li>Which angle converts best overall?</li>
+    <li>Which angle converts best per traffic source?</li>
+    <li>Is Version C viable? (gift purchases are often underserved)</li>
+</ul>
+
+<hr>
+
+<h2>6. Key Questions for Review</h2>
+
+<ol>
+    <li>Does each version feel distinct enough, or do they blur together?</li>
+    <li>Is the gift angle (Version C) worth pursuing, or should we focus on A and B?</li>
+    <li>Are any claims or framings problematic?</li>
+    <li>Which version would you personally respond to?</li>
+</ol>
+
+<hr>
+
+<p><em>Internal review document — Faith Essentials by AlMaghrib Institute</em></p>
 
 </body>
 </html>
